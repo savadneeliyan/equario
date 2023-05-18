@@ -53,4 +53,5 @@ const ButtonS = styled.button`
   text-align: left;
   padding:20px 30px;
   text-decoration: none;
+  cursor: pointer;
 `;

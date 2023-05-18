@@ -1,41 +1,68 @@
-.App {
-  text-align: center;
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html, body {
+  height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
-.App-link {
-  color: #61dafb;
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input, button, textarea, select {
+  font: inherit;
+  outline: 0;
 }
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+  margin: 0;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+::placeholder{
+  color: #1E3B97;
+}
+
 a{
   text-decoration: none;
+}
+
+
+@font-face {
+  font-family: mediumFont;
+  src: url(/public/assets/font/ITC\ Avant\ Garde\ Gothic\ Medium.otf);
+}
+
+@font-face {
+  font-family: roboto-400;
+  src: url(/public/assets/font/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: roboto-500;
+  src: url(/public/assets/font/Roboto-Medium.ttf);
+}
+
+@font-face {
+  font-family: poppins-500;
+  src: url(/public/assets/font/Poppins-Medium.ttf);
+}
+
+@font-face {
+  font-family: Abhaya-500;
+  src: url(/public/assets/font/AbhayaLibre-Medium.ttf);
 }

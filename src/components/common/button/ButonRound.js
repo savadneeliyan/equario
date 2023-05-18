@@ -39,7 +39,7 @@ const ButtonS = styled.button`
   border-radius: 50%;
   height:146px;
   width:146px;
-  border: 4px solid black;
+  border: 0px solid black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,6 +53,7 @@ const ButtonS = styled.button`
   text-align: center;
   padding: 20px 30px;
   text-decoration: none;
+  cursor: pointer;
 `;
 
 const Path = styled.path`
