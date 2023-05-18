@@ -1,25 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import ButtonRound from './components/common/button/ButonRound';
+import Button from './components/common/button/Button';
+import ButtonContainer from './components/common/button/ButtonContainer';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Button title="Book an Appoinment" link="/home"/>
+      <ButtonRound />
+      <ButtonContainer />
     </div>
   );
 }
 
 export default App;
+
