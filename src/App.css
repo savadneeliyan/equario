@@ -58,6 +58,11 @@ a{
 }
 
 @font-face {
+  font-family: poppins-400;
+  src: url(/public/assets/font/Poppins-Regular.ttf);
+}
+
+@font-face {
   font-family: poppins-500;
   src: url(/public/assets/font/Poppins-Medium.ttf);
 }

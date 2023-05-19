@@ -8,10 +8,10 @@ function Header() {
         <RightDiv>
             <Contact>
                 <ContactItemsHead>Mobile : 
-                    <ContactItems>+44 (0) 7920085439</ContactItems>
+                <a href=""><ContactItems>+44 (0) 7920085439</ContactItems></a>
                 </ContactItemsHead>
                 <ContactItemsHead>E-mail: 
-                    <ContactItems>faried@equarius8.com</ContactItems>
+                <a href=""><ContactItems>faried@equarius8.com</ContactItems></a>
                 </ContactItemsHead>
             </Contact>
             <svg width="49" height="35" viewBox="0 0 49 35" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -53,6 +53,7 @@ const Menu = styled.div`
     right: 0;
     color: #fff;
     display: none;
+    z-index: 3;
 `
 
 const Wrapper = styled.div`
@@ -65,6 +66,7 @@ const Wrapper = styled.div`
     position: absolute;
     left: 0;
     right: 0;
+    z-index: 2;
 `
 const RightDiv = styled.div`
     align-items: center;
@@ -94,4 +96,5 @@ const ContactItems = styled.h2`
     font-weight: 500;
     font-size: 21.5297px;
     line-height: 25px;
+    color: #fff;
 `

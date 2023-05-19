@@ -1,7 +1,18 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 function Footer() {
+
+    const LinkItem = styled(Link)`
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        color: #fff;
+    `   
+
   return (
     <>
         <Section>
@@ -9,32 +20,33 @@ function Footer() {
                 <img src="/assets/images/FooterImg.png" alt="" />
                 <div>
                     <ContactItemsHead>Mobile : 
-                        <ContactItems>+44 (0) 7920085439</ContactItems>
+                    <a href=""><ContactItems>+44 (0) 7920085439</ContactItems></a>
                     </ContactItemsHead>
                     <ContactItemsHead>E-mail: 
-                        <ContactItems>faried@equarius8.com</ContactItems>
+                    <a href=""><ContactItems>faried@equarius8.com</ContactItems></a>
                     </ContactItemsHead>
                 </div>
                 <div>
                     <ContactItemsHead>Quick Links</ContactItemsHead>
                     <ListItem>
-                        <LinkItem href="">Home</LinkItem>
-                        <LinkItem href="">About Us</LinkItem>
-                        <LinkItem href="">Services</LinkItem>
-                        <LinkItem href="">Why Coaching</LinkItem>
-                        <LinkItem href="">Results Mechanism</LinkItem>
-                        <LinkItem href="">Testimonials</LinkItem>
-                        <LinkItem href="">Contact Us</LinkItem>
+                        <LinkItem to="/">Home</LinkItem>
+                        <LinkItem to="/about">About Us</LinkItem>
+                        <LinkItem to="/service">Services</LinkItem>
+                        <LinkItem to="/coaching">Why Coaching</LinkItem>
+                        <LinkItem to="/result">Results Mechanism</LinkItem>
+                        <LinkItem to="/testimonials">Testimonials</LinkItem>
+                        <LinkItem to="/contact">Contact Us</LinkItem>
                    </ListItem>
                    
                 </div>
                 <div>
                     <ContactItemsHead>Follow Me</ContactItemsHead>
                     <Social>
-                        <Img src="/assets/icons/Group700.svg" alt="" />
-                        <Img src="/assets/icons/Group700.svg" alt="" />
-                        <Img src="/assets/icons/Group700.svg" alt="" />
-                        <Img src="/assets/icons/Group700.svg" alt="" />
+                        <a href=""><Img src="/assets/icons/Group700.svg" alt="" /></a>
+                        <a href=""><Img src="/assets/icons/Group700.svg" alt="" /></a>
+                        <a href=""><Img src="/assets/icons/Group700.svg" alt="" /></a>
+                        <a href=""><Img src="/assets/icons/Group700.svg" alt="" /></a>
+                        <a href=""><Img src="/assets/icons/Group700.svg" alt="" /></a>
                     </Social>
 
                     <Button>
@@ -62,7 +74,6 @@ function Footer() {
                             />
                         </svg>
                     </Button>
-                   
                 </div>
             </Wrapper>
         </Section>
@@ -119,16 +130,10 @@ const ContactItems = styled.h2`
     line-height: 25px;
     color: #fff;
     margin-bottom:20px;
+    cursor: pointer;
 `
 
-const LinkItem = styled.a`
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
-    color: #fff;
-`
+
 const ListItem = styled.div`
     display: flex;
     flex-direction: column;
@@ -144,6 +149,7 @@ const Social = styled.div`
 const Img = styled.img`
     width: 40px;
     height: 40px;
+    cursor: pointer;
 `
 const Button = styled.a`
     display: flex;
@@ -155,4 +161,5 @@ const Button = styled.a`
     font-size: 18px;
     line-height: 21px;
     color: #fff;
+    cursor: pointer;
 `
