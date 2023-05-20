@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import styled from "styled-components";
 
 
 function Button({title, link}) {
   return (
-    <a href={link}>
+    <Link to={link}>
       <ButtonS>
         {title ? title : "Read More"}
         <svg
@@ -30,7 +31,7 @@ function Button({title, link}) {
           />
         </svg>
       </ButtonS>
-    </a>
+    </Link>
   );
 }
 

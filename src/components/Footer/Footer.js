@@ -20,10 +20,10 @@ function Footer() {
                 <img src="/assets/images/FooterImg.png" alt="" />
                 <div>
                     <ContactItemsHead>Mobile : 
-                    <a href=""><ContactItems>+44 (0) 7920085439</ContactItems></a>
+                        <Link to="mailto:faried@equarius8.com"><ContactItems>+44 (0) 7920085439</ContactItems></Link>
                     </ContactItemsHead>
                     <ContactItemsHead>E-mail: 
-                    <a href=""><ContactItems>faried@equarius8.com</ContactItems></a>
+                        <Link to="mailto:faried@equarius8.com"><ContactItems>faried@equarius8.com</ContactItems></Link>
                     </ContactItemsHead>
                 </div>
                 <div>
@@ -42,11 +42,11 @@ function Footer() {
                 <div>
                     <ContactItemsHead>Follow Me</ContactItemsHead>
                     <Social>
-                        <a href=""><Img src="/assets/icons/Group700.svg" alt="" /></a>
-                        <a href=""><Img src="/assets/icons/Group700.svg" alt="" /></a>
-                        <a href=""><Img src="/assets/icons/Group700.svg" alt="" /></a>
-                        <a href=""><Img src="/assets/icons/Group700.svg" alt="" /></a>
-                        <a href=""><Img src="/assets/icons/Group700.svg" alt="" /></a>
+                        <Link to=""><Img src="/assets/icons/Group700.svg" alt="" /></Link>
+                        <Link to=""><Img src="/assets/icons/Group700.svg" alt="" /></Link>
+                        <Link to=""><Img src="/assets/icons/Group700.svg" alt="" /></Link>
+                        <Link to=""><Img src="/assets/icons/Group700.svg" alt="" /></Link>
+                        <Link to=""><Img src="/assets/icons/Group700.svg" alt="" /></Link>
                     </Social>
 
                     <Button>

@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import ButtonContainer from '../common/button/ButtonContainer'
 import Button from '../common/button/Button'
+import { Link } from 'react-router-dom'
 
 function ContactPageSection() {
   return (
@@ -10,10 +11,10 @@ function ContactPageSection() {
            
             <WrapperContainer>
             <ButtomContainer>
-                    <ButtonContainer title="+44 (0) 7920085439"/>
-                    <ButtonContainer title="faried@equarius8.com"/>
+                    <ButtonContainer title="+44 (0) 7920085439" link="tel:+44 (0) 7920085439"/>
+                    <ButtonContainer title="faried@equarius8.com" link="mailto:faried@equarius8.com"/>
                     <ButtonContainer title="Lorem Ipsum is simply dummy text of the"/>
-                    <AppoinmentButton>
+                    <AppoinmentButton to="/contact">
                         Book an Appoinment  
                         <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/Svg">
                             <path d="M2 21L21 2" stroke="white" stroke-width="2.63994" stroke-linecap="round" stroke-linejoin="round" />
@@ -32,7 +33,7 @@ function ContactPageSection() {
                         <Input type="text"  placeholder='Phone*' />
                     </InputContainer>
                     <Textarea type="textarea" placeholder='Message*'  />
-                    <Button/>
+                    <Button title="submit"/>
                 </FormContainer>
                 
             </WrapperContainer>
@@ -102,7 +103,7 @@ const ButtomContainer = styled.div`
     flex-direction: column;
     gap:30px;
 `
-const AppoinmentButton = styled.a`
+const AppoinmentButton = styled(Link)`
     display: flex;
     align-items: center;
     gap: 25px;

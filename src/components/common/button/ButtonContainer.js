@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 function ButtonContainer({ title, icon, link }) {
   return (
-      <a href={link}>
+      <Link to={link}>
         <ButtonS>
                 {icon ? (
                     <img src={icon} alt="" />
@@ -33,7 +34,7 @@ function ButtonContainer({ title, icon, link }) {
             )}
             <Title>{title ? title : "Click Me"}</Title>
         </ButtonS>
-      </a>
+      </Link>
   );
 }
 

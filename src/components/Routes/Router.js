@@ -10,6 +10,7 @@ import Coaching from '../Pages/Coaching'
 import ContactPage from '../Pages/ContactPage'
 
 function Router() {
+  
   return (
     <Routes>
       <Route path="/" element={<HomePage/>} />

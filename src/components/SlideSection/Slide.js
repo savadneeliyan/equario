@@ -15,7 +15,7 @@ function Slide() {
         modules={[Navigation, Pagination, A11y]}
         spaceBetween={50}
         slidesPerView={1}
-        navigation
+        // navigation
         pagination={{ clickable: true }}
         // scrollbar={{ draggable: true }}
         onSwiper={(swiper) => console.log(swiper)}

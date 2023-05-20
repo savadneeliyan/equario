@@ -4,16 +4,20 @@ import styled from 'styled-components'
 import Image from '../common/Image/Image'
 
 function Banner() {
+    const ScrollDown = ()=>{
+        window.scrollTo({top: 1100, left: 0, behavior: 'smooth'});
+    }
   return (
     <Section>
-        <Wrapper>
+        <Wrapper data-aos="fade-up"
+     data-aos-anchor-placement="center-center">
             <div>
                 <Heading>Empower Yourself and Live your Authentic Life</Heading>
                 <Description>Empower Yourself and Live your Authentic Life Now and Unlock and Activate Your Leadership Potential</Description>
-                <Button title="Book an Appoinment" link="/home"/>
+                <Button title="Book an Appoinment" link="/contact"/>
             </div>
             <Image  name="Faried Chopdat" src="/assets/images/Rectangle6.jpg"/>
-            <Scroll>
+            <Scroll onClick={ScrollDown}>
                 <Svg width="17" height="22" viewBox="0 0 17 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1.69934 13.838L8.74611 20.8848L15.7929 13.838M8.74611 1.14916L8.74611 20.6874" stroke="white" stroke-width="1.51975" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                 </Svg>
@@ -82,6 +86,7 @@ const Scroll = styled.div`
     right: 50px;
     transform: rotate(270deg);
     bottom: 150px;
+    cursor: pointer;
 `
 const Svg = styled.svg`
     transform: rotate(90deg);

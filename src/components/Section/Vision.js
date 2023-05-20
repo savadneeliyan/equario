@@ -63,10 +63,3 @@ const Description = styled.p`
     margin-top: 30px;
     margin-bottom: 30px;
 `
-const Title = styled.h2`
-    font-family: 'roboto-500';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 25px;
-    line-height: 35px;
-`

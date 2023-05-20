@@ -1,30 +1,70 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import styled from 'styled-components'
-import Button from '../common/button/Button'
 import ButtonContainer from '../common/button/ButtonContainer'
+import emailjs from '@emailjs/browser';
 
 function Contact() {
+
+    const form = useRef();
+    const [success, setsuccess] = useState(null)
+
+    const handleEmail = async (e)=>{
+        e.preventDefault();
+  
+        emailjs.sendForm('service_eeajigq', 'template_n3r56rb', form.current, 'dhWq6M73klRpSL5RC')
+            .then((result) => {
+              console.log(result.text);
+              setsuccess(true)
+            }, (error) => {
+              console.log(error.text);
+              setsuccess(false)
+            });
+    }
   return (
 
     <Section>
         <Wrapper>
             <Title>Get in Touch</Title>
             <WrapperContainer>
-                <FormContainer action="">
+                <FormContainer ref={form}   onSubmit={handleEmail}>
                     <InputContainer>
-                        <Input type="text" placeholder='First Name*' />
-                        <Input type="text"  placeholder='Surname*' />
+                        <Input type="text" placeholder='First Name*' name='firstname' />
+                        <Input type="text"  placeholder='Surname*' name='lastname'/>
                     </InputContainer>
                     <InputContainer>
-                        <Input type="text" placeholder='E-mail*'  />
-                        <Input type="text"  placeholder='Phone*' />
+                        <Input type="text" placeholder='E-mail*' name='email' />
+                        <Input type="text"  placeholder='Phone*' name='phone' />
                     </InputContainer>
-                    <Textarea type="textarea" placeholder='Message*'  />
-                    <Button/>
+                    <Textarea type="textarea" placeholder='Message*' name='message' />
+                    <ButtonS type='submit'>
+                        Submit
+                        <svg
+                        width="23"
+                        height="23"
+                        viewBox="0 0 23 23"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        >
+                        <path
+                            d="M2 21L21 2"
+                            stroke="white"
+                            stroke-width="2.63994"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M2 2H21V21"
+                            stroke="white"
+                            stroke-width="2.63994"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        </svg>
+                    </ButtonS>
                 </FormContainer>
                 <ButtomContainer>
-                    <ButtonContainer title="+44 (0) 7920085439"/>
-                    <ButtonContainer title="faried@equarius8.com"/>
+                    <ButtonContainer title="+44 (0) 7920085439" link="tel:+44 (0) 7920085439"/>
+                    <ButtonContainer title="faried@equarius8.com" link="mailto:faried@equarius8.com"/>
                     <ButtonContainer title="Lorem Ipsum is simply dummy text of the"/>
                 </ButtomContainer>
             </WrapperContainer>
@@ -95,3 +135,22 @@ const ButtomContainer = styled.div`
     flex-direction: column;
     gap:30px;
 `
+const ButtonS = styled.button`
+  color: #fff;
+  background-color: red;
+  border-radius: 10px;
+  border: 4px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 27px;
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding:20px 30px;
+  text-decoration: none;
+  cursor: pointer;
+`;

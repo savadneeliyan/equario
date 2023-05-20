@@ -1,33 +1,36 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-function ButtonRound({ title }) {
+function ButtonRound({ title, link }) {
   return (
-    <ButtonS>
-      {title ? title : "Read More"}
-      <svg
-        width="23"
-        height="23"
-        viewBox="0 0 23 23"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <Path
-          d="M2 21L21 2"
-          stroke="white"
-          stroke-width="2.63994"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <Path
-          d="M2 2H21V21"
-          stroke="white"
-          stroke-width="2.63994"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-    </ButtonS>
+    <Link to={link}>
+      <ButtonS>
+        {title ? title : "Read More"}
+        <svg
+          width="23"
+          height="23"
+          viewBox="0 0 23 23"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <Path
+            d="M2 21L21 2"
+            stroke="white"
+            stroke-width="2.63994"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <Path
+            d="M2 2H21V21"
+            stroke="white"
+            stroke-width="2.63994"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </ButtonS>
+    </Link>
   );
 }
 

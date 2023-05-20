@@ -3,6 +3,9 @@ import styled from 'styled-components'
 import BannerImage from '../Image/BannerImage'
 
 function PageBanner({title, full}) {
+    const ScrollDown = ()=>{
+        window.scrollTo({top: 600, left: 0, behavior: 'smooth'});
+    }
   return (
     <Section full={full}>
         <Wrapper full={full}>
@@ -10,7 +13,7 @@ function PageBanner({title, full}) {
                 <Heading>{ title ? title :"Heading" }</Heading>
             </Div>
             <BannerImage  src="/assets/images/Rectangle6.jpg"/>
-            <Scroll>
+            <Scroll onClick={ScrollDown}>
                 <Svg width="17" height="22" viewBox="0 0 17 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1.69934 13.838L8.74611 20.8848L15.7929 13.838M8.74611 1.14916L8.74611 20.6874" stroke="white" stroke-width="1.51975" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                 </Svg>
@@ -75,6 +78,7 @@ const Scroll = styled.div`
     right: 50px;
     transform: rotate(270deg);
     bottom: 150px;
+    cursor: pointer;
 `
 const Svg = styled.svg`
     transform: rotate(90deg);
