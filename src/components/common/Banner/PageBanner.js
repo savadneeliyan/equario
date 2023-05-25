@@ -7,7 +7,7 @@ function PageBanner({title, full}) {
         window.scrollTo({top: 600, left: 0, behavior: 'smooth'});
     }
   return (
-    <Section full={full}>
+    <Section full={full}  data-aos="fade-up">
         <Wrapper full={full}>
             <Div>
                 <Heading>{ title ? title :"Heading" }</Heading>
@@ -34,6 +34,21 @@ const Section = styled.div`
     align-items: center;
     justify-content: center;
     position: relative;
+    z-index: 1;
+    @media (max-width: 992px) {
+        height: auto;
+        padding-top: 220px;
+    }
+    @media (max-width: 1600px) {
+        background: linear-gradient(to left, #1E3B97 720px, #ffffff 43.7%);
+    }
+    @media (max-width: 1200px) {
+        background: linear-gradient(to left, #1E3B97 600px, #ffffff 43.7%);
+    }
+    @media (max-width: 992px) {
+        background: linear-gradient(to top, #1E3B97 35%, #ffffff 10%);
+        padding-bottom: 30px;
+    }
 `
 const Wrapper = styled.div`
     max-width: 1480px;
@@ -44,6 +59,13 @@ const Wrapper = styled.div`
     margin: auto;
     gap:40px;
     margin-bottom: ${(props) => props.full ? "0px" : "-128px" } ;
+    @media (max-width: 1480px) {
+        padding: 0 15px;
+    }
+    @media (max-width: 992px) {
+        align-items: start;
+        flex-direction: column;
+    }
 `
 const Div = styled.div`
     max-width: 677px;
@@ -59,6 +81,10 @@ const Heading = styled.h1`
     color:#1E4A97;
     max-width: 500px;
     /* max-width: 647px; */
+    @media (max-width: 1480px) {
+        font-size: 64px;
+        line-height: 64px;
+    }
 `
 
 
@@ -79,6 +105,10 @@ const Scroll = styled.div`
     transform: rotate(270deg);
     bottom: 150px;
     cursor: pointer;
+    @media (max-width: 1500px) {
+        right: 0;
+        display: none;
+    }
 `
 const Svg = styled.svg`
     transform: rotate(90deg);

@@ -6,7 +6,7 @@ import ButtonRound from '../common/button/ButonRound'
 
 function Coaching() {
   return (
-    <Section>
+    <Section  data-aos="fade-up">
         <WrapperTop>
             <WrapperLeft>
                 <Title>Why Coaching?</Title>
@@ -36,6 +36,16 @@ const Section = styled.div`
     background: linear-gradient(to left, #E20001 65.7%, #FFD300 65.7%);
     padding-bottom: 190px;
     padding-top: 120px;
+    @media (max-width: 1480px) {
+        padding: 0 15px;
+    }
+    @media (max-width: 1024px) {
+       height: auto;
+       /* padding: 50px 0; */
+       padding-top: 50px;
+       padding-bottom: 100px;
+       background: linear-gradient(to top, #E20001 52%, #FFD300 34.35%);
+    }
 `
 
 const WrapperTop = styled.div`
@@ -46,6 +56,9 @@ const WrapperTop = styled.div`
 const WrapperLeft = styled.div`
     margin-left: 30%;
     max-width: 657px;
+    @media (max-width: 992px) {
+        margin-left: 0;
+    }
 `
 
 
@@ -71,6 +84,14 @@ const CardGrid = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
+    @media (max-width: 1600px) {
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: auto;
+    }
+    @media (max-width: 650px) {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 30px;
+    }
 `
 
 const Wrapper = styled.div`
@@ -81,4 +102,8 @@ const Wrapper = styled.div`
     justify-content: space-between;
     margin: auto;
     gap:110px;
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        align-items: start;
+    }
 `

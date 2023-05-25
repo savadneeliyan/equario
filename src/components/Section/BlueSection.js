@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 function BlueSection() {
   return (
-    <Section>
+    <Section  data-aos="fade-up">
         <Wrapper>
             <Description>Whether you are a Rising Star, a Leader, a member of the LGBTQ+ or BAME community and ally or wish to apply a spiritual lens to your career, we would love to help you focus on what matters most and tap into your inner resources and strengths, transform, and overcome obstacles, and achieve prosperity and freedom to be who you are.</Description>
             <Description>At equarius8, we collaborate with like-minded coaches who focus on business, professional and executive, life, and spiritual coaching to provide holistic and tailored services to meet your needs. Our services include tailored 1:1 Coaching and Mentoring, Facilitating Group Workshops, and Group Coaching.</Description>
@@ -40,6 +40,10 @@ const Wrapper = styled.div`
     max-width: 1580px;
     width: 100%;
     margin-left: 150px;
+    @media (max-width: 1480px) {
+        padding: 0 15px;
+        margin-left: 0px;
+    }
 `
 const Description = styled.p`
     font-family: 'roboto-400';

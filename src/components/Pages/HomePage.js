@@ -16,7 +16,7 @@ function HomePage() {
         <ListBanner/>
         <Service/>
         <Coaching/>
-        <Slide/>
+        <Slide />
         <Contact/>
         <Footer/>
     </>

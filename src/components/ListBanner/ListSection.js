@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 function ListSection() {
   return (
-    <Section>
+    <Section  data-aos="fade-up">
         <Wrapper>
             
             <div>
@@ -30,15 +30,24 @@ export default ListSection
 
 const Section = styled.div`
     background: linear-gradient(to left, #FFD300 84.95%, #E20001 84.95%);
-    height: 937px;
     display: flex;
     justify-content: center;
     padding-top: 190px;
+    padding-bottom: 60px;
+    @media (max-width: 768px) {
+        background:#FFD300;
+    }
 `
 const Wrapper = styled.div`
     max-width: 1250px;
     width: 100%;
     margin-left: 150px;
+    @media (max-width: 1480px) {
+        padding: 0 15px;
+    }
+    @media (max-width: 768px) {
+        margin-left: 0;
+    }
 `
 const Description = styled.p`
     font-family: 'roboto-400';

@@ -18,6 +18,9 @@ const Container = styled.div`
   max-width: 760px;
   max-height: 645px;
   position: relative;
+  @media (max-width: 992px) {
+    max-width: 600px;
+  }
 `
 const Img = styled.img`
   outline-offset: -14px;

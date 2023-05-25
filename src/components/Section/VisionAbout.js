@@ -4,7 +4,7 @@ import Image from '../common/Image/Image'
 
 function VisionAbout() {
   return (
-    <Section>
+    <Section  data-aos="fade-up">
         <Heading>My profile</Heading>
         <Wrapper>
             <div>
@@ -35,6 +35,13 @@ const Section = styled.div`
     justify-content: center;
     flex-direction: column;
     padding: 160px 0;
+    @media (max-width: 1480px) {
+        padding: 0 15px;
+    }
+    @media (max-width: 992px) {
+       background: #fff;
+    }
+    
 `
 const Wrapper = styled.div`
     max-width: 1581px;
@@ -44,7 +51,12 @@ const Wrapper = styled.div`
     justify-content: space-between;
     /* margin: auto; */
     gap:60px;
+    @media (max-width: 992px) {
+        flex-direction: column-reverse;
+        gap: 0;
+    }
 `
+
 const Heading = styled.h1`
     font-family: 'mediumFont';
     font-style: normal;

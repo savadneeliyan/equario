@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom'
 
 function ContactPageSection() {
   return (
-    <Section>
+    <Section  data-aos="fade-up">
         <Wrapper>
            
             <WrapperContainer>
-            <ButtomContainer>
+                <ButtomContainer>
                     <ButtonContainer title="+44 (0) 7920085439" link="tel:+44 (0) 7920085439"/>
                     <ButtonContainer title="faried@equarius8.com" link="mailto:faried@equarius8.com"/>
                     <ButtonContainer title="Lorem Ipsum is simply dummy text of the"/>
@@ -47,10 +47,21 @@ export default ContactPageSection
 const Section = styled.div`
     background: linear-gradient(to left, #fff 59%, #FF8F07 59%);
     padding: 140px 0;
+    @media (max-width: 1700px) {
+        background: linear-gradient(to right, #FF8F07 30%, #fff 25%);
+    }
+    @media (max-width: 992px) {
+        background: linear-gradient(to top, #FF8F07 36.8%, #fff 36.8%);
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
 `
 const Wrapper = styled.div`
     max-width: 1679px;
     margin: auto;
+    @media (max-width: 1700px) {
+        padding: 0 15px;
+    }
 `
 const Title = styled.div`
     font-family: 'mediumFont';
@@ -77,6 +88,12 @@ const WrapperContainer = styled.div`
     display:flex;
     justify-content: space-between;
     gap: 30px;
+    @media (max-width: 1200px) {
+        gap: 50px;
+    }
+    @media (max-width: 992px) {
+        flex-direction: column-reverse;
+    }
 `
 const Input = styled.input`
     outline: 0;

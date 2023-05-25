@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 function BlueSectionAbout() {
   return (
-    <Section>
+    <Section  data-aos="fade-up">
         <Wrapper>
 
             <Heading>My Coaching Philosophy</Heading>
@@ -37,6 +37,9 @@ const Section = styled.div`
 const Wrapper = styled.div`
     max-width: 1580px;
     width: 100%;
+    @media (max-width: 1480px) {
+        padding: 0 15px;
+    }
 `
 const Description = styled.p`
     font-family: 'roboto-400';

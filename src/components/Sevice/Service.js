@@ -6,10 +6,10 @@ import Card from '../Card/Card'
 
 function Service() {
   return (
-    <Section>
+    <Section  data-aos="fade-up">
         <Heading>Our Services</Heading>
-        <Wrapper>
-            <div>
+        <Wrapper >
+            <CardGridContainer>
                 <CardGrid>
                     <Card bg/>
                     <Card bg/>
@@ -17,7 +17,7 @@ function Service() {
                     <Card bg/>
                 </CardGrid>
                 <Button link="/home"/>
-            </div>
+            </CardGridContainer>
             <Image src="/assets/images/Rectangle8.jpg" />
         </Wrapper>
     </Section>
@@ -33,6 +33,15 @@ const Section = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    @media (max-width: 1480px) {
+        padding: 0 15px;
+    }
+    @media (max-width: 1024px) {
+       height: auto;
+       padding-top: 50px;
+       padding-bottom: 100px;
+       background: linear-gradient(to top, #1E3B97 52%, #fff 34.35%);
+    }
 `
 const Wrapper = styled.div`
     max-width: 1480px;
@@ -42,14 +51,26 @@ const Wrapper = styled.div`
     justify-content: space-between;
     /* margin: auto; */
     gap:40px;
+    @media (max-width: 1024px) {
+        flex-direction: column-reverse;
+
+    }
 `
 
-const CardGrid = styled.h1`
+const CardGridContainer = styled.div`
+    width: 44%;
+    @media (max-width: 1024px) {
+        width: 100%;
+        max-width: 650px;
+    }
+`
+const CardGrid = styled.div`
     display: grid;
-    grid-template-columns: 300px 300px;
+    grid-template-columns: 1fr 1fr;
     margin-bottom: 70px;
     margin-top: 60px;
-    gap: 50px;
+    gap: 7.5%;
+    /* gap: 7.5%; */
 `
 
 const Heading = styled.h1`

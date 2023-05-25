@@ -7,10 +7,10 @@ function Banner() {
     const ScrollDown = ()=>{
         window.scrollTo({top: 1100, left: 0, behavior: 'smooth'});
     }
+    
   return (
     <Section>
-        <Wrapper data-aos="fade-up"
-     data-aos-anchor-placement="center-center">
+        <Wrapper>
             <div>
                 <Heading>Empower Yourself and Live your Authentic Life</Heading>
                 <Description>Empower Yourself and Live your Authentic Life Now and Unlock and Activate Your Leadership Potential</Description>
@@ -38,6 +38,20 @@ const Section = styled.div`
     align-items: center;
     justify-content: center;
     position: relative;
+    @media (max-width: 992px) {
+        height: auto;
+        padding-top: 220px;
+    }
+    @media (max-width: 1600px) {
+        background: linear-gradient(to left, #1E3B97 720px, #ffffff 43.7%);
+    }
+    @media (max-width: 1200px) {
+        background: linear-gradient(to left, #1E3B97 600px, #ffffff 43.7%);
+    }
+    @media (max-width: 992px) {
+        background: linear-gradient(to top, #1E3B97 600px, #ffffff 43.7%);
+        padding-bottom: 30px;
+    }
 `
 const Wrapper = styled.div`
     max-width: 1480px;
@@ -47,6 +61,13 @@ const Wrapper = styled.div`
     justify-content: space-between;
     margin: auto;
     gap:40px;
+    @media (max-width: 1480px) {
+        padding: 0 15px;
+    }
+    @media (max-width: 992px) {
+        align-items: start;
+        flex-direction: column;
+    }
 `
 
 const Heading = styled.h1`
@@ -57,6 +78,10 @@ const Heading = styled.h1`
     line-height: 84px;
     color:#1E4A97;
     max-width: 647px;
+    @media (max-width: 1480px) {
+        font-size: 64px;
+        line-height: 64px;
+    }
 `
 const Description = styled.p`
     font-family: 'roboto-400';
@@ -87,6 +112,9 @@ const Scroll = styled.div`
     transform: rotate(270deg);
     bottom: 150px;
     cursor: pointer;
+    @media (max-width: 992px) {
+        right: 0;
+    }
 `
 const Svg = styled.svg`
     transform: rotate(90deg);

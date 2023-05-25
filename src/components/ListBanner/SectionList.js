@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 function SectionList() {
   return (
-    <Section>
+    <Section  data-aos="fade-up">
         <Wrapper>
             <div>
                 <Heading>My Values</Heading>
@@ -85,6 +85,10 @@ const Section = styled.div`
     justify-content: center;
     padding-top: 180px;
     padding-bottom: 100px;
+    @media (max-width: 992px) {
+        padding: 50px 15px;
+        padding-top: 100px;
+    }
 `
 const Wrapper = styled.div`
     max-width: 1560px;
@@ -92,6 +96,13 @@ const Wrapper = styled.div`
     grid-template-columns: 1fr 1fr 1fr;
     display: grid;
     column-gap: 30px;
+    @media (max-width: 992px) {
+        padding: 0 15px;
+        grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
 `
 
 const ListContainer = styled.ul`

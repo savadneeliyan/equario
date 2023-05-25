@@ -5,9 +5,9 @@ import Button from '../common/button/Button'
 
 function ListBanner() {
   return (
-    <Section>
+    <Section  data-aos="fade-up">
         <Wrapper>
-            <Image src="/assets/images/Rectangle8.jpg" />
+            <Image src="/assets/images/Rectangle8.jpg"/>
             <div>
                 <Heading>Unleash Your Inner Superhero</Heading>
                 <Description>Reimagine and Elevate Your Professional Game with Executive Coaching</Description>
@@ -32,6 +32,11 @@ const Section = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width: 992px) {
+        background: linear-gradient(to top, #FFD300 65%, #E20001 65%);
+        padding: 50px 0;
+        height: auto;
+    }
 `
 const Wrapper = styled.div`
     max-width: 1480px;
@@ -41,6 +46,14 @@ const Wrapper = styled.div`
     justify-content: space-between;
     margin: auto;
     gap:40px;
+    @media (max-width: 1480px) {
+        padding: 0 15px;
+    }
+    @media (max-width: 992px) {
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+    }
 `
 
 const Heading = styled.h1`

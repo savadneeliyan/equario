@@ -10,14 +10,14 @@ import styled from 'styled-components';
 
 function Slide() {
   return (
-    <Section>
+    <Section  data-aos="fade-up">
         <Swiper
         modules={[Navigation, Pagination, A11y]}
         spaceBetween={50}
         slidesPerView={1}
-        // navigation
+       
         pagination={{ clickable: true }}
-        // scrollbar={{ draggable: true }}
+        
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log('slide change')}
         >
@@ -56,7 +56,9 @@ export default Slide
 
 const Section = styled.div`
     background: #58B8B4;
-    padding: 130px 0;
+    padding: 130px 15px;
+    overflow: hidden;
+
 `
 const Description = styled.div`
     max-width:938px;

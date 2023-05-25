@@ -22,7 +22,7 @@ function Contact() {
     }
   return (
 
-    <Section>
+    <Section  data-aos="fade-up">
         <Wrapper>
             <Title>Get in Touch</Title>
             <WrapperContainer>
@@ -79,6 +79,14 @@ export default Contact
 const Section = styled.div`
     background: linear-gradient(to left, #FF8F07 36.8%, #fff 36.8%);
     padding: 140px 0;
+    @media (max-width: 1600px) {
+        padding: 0 15px;
+    }
+    @media (max-width: 992px) {
+        background: linear-gradient(to top, #FF8F07 36.8%, #fff 36.8%);
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
 `
 const Wrapper = styled.div`
     max-width: 1580px;
@@ -108,7 +116,13 @@ const WrapperContainer = styled.div`
     width: 100%;
     display:flex;
     justify-content: space-between;
-    gap: 30px;
+    gap: 160px;
+    @media (max-width: 1200px) {
+        gap: 50px;
+    }
+    @media (max-width: 992px) {
+        flex-direction: column;
+    }
 `
 const Input = styled.input`
     outline: 0;

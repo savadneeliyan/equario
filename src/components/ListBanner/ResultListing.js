@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 function ResultListing() {
   return (
-    <Section>
+    <Section  data-aos="fade-up">
         <Wrapper>
             
             <div>
@@ -46,6 +46,10 @@ const Section = styled.div`
     justify-content: center;
     padding-top: 180px;
     padding-bottom: 100px;
+    @media (max-width: 1600px) {
+        padding: 180px 15px;
+        padding-bottom: 80px;
+    }
 `
 const Wrapper = styled.div`
     max-width: 1580px;

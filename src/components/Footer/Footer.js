@@ -90,13 +90,27 @@ const Section = styled.div`
     background-color: #1E3B97 ;
     padding-top: 104px;
     padding-bottom: 60px;
-    border: 1px solid #ffffff24;  
+    border: 1px solid #ffffff24; 
+    @media (max-width: 1600px) {
+        padding-left:15px;
+        padding-right:15px;
+    } 
 `
 const Wrapper = styled.div`
     max-width: 1581px;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    @media (max-width: 1200px) {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+    }
+    @media (max-width: 760px) {
+        grid-template-columns: 1fr  1fr;
+    }
+    @media (max-width: 500px) {
+        grid-template-columns: 1fr;
+    }
 `
 const Copyright = styled.div`
     text-align: center;

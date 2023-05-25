@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 function Focus() {
   return (
-    <Section>
+    <Section  data-aos="fade-up">
         <Wrapper>
             <Description>Coaching and mentoring can significantly impact the professional development of diverse professionals and executives. Some of the benefits of coaching and mentoring include the following:</Description>
             <Heading>Be clear on what you want and focus on what matters most to you:</Heading>
@@ -75,6 +75,9 @@ const Wrapper = styled.div`
     max-width: 1560px;
     width: 100%;
     column-gap: 30px;
+    @media (max-width: 1480px) {
+        padding: 0 15px;
+    }
 `
 const Description = styled.p`
     font-family: 'roboto-400';
@@ -104,6 +107,10 @@ const Container = styled.div`
     align-items: start;
     gap: 40px;
     margin-top: 50px;
+    @media (max-width: 768px) {
+        flex-direction: column;
+        margin-top: 0;
+    }
 `
 const Title = styled.h2`
     font-family: 'poppins-500';

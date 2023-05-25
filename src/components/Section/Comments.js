@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 function Comments() {
   return (
-    <Section>
+    <Section  data-aos="fade-up">
         <Wrapper>
             <Container backgroundColor="#58B8B4">
                 <Img src="/assets/images/Ellipse2031.png" alt="" />
@@ -82,6 +82,9 @@ const Wrapper = styled.div`
     max-width: 1580px;
     width: 100%;
     column-gap: 30px;
+    @media (max-width: 1480px) {
+        padding: 0 15px;
+    }
 `
 const Container = styled.div`
     background-color:${(props) => props.backgroundColor};
@@ -89,6 +92,12 @@ const Container = styled.div`
     border-radius: 20px;
     display: flex;
     margin-bottom: 50px;
+    @media (max-width: 992px) {
+        flex-direction: column;
+        gap: 25px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 `
 const Img = styled.img`
     width: 134px;
@@ -107,6 +116,14 @@ const ContainerItem = styled.div`
         top:-30px;
         position: absolute;
         content: url('data:image/svg+xml;utf8,<svg width="69" height="50" viewBox="0 0 69 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.1" d="M29.1381 0V3.13175C23.4333 4.28366 18.595 6.87545 14.6232 10.9071C10.7237 14.9388 8.73783 20.0864 8.66562 26.3499C11.1209 24.406 13.865 23.4341 16.898 23.4341C20.7253 23.4341 23.7582 24.622 25.9969 26.9978C28.2355 29.3736 29.3548 32.5414 29.3548 36.5011C29.3548 40.3168 27.9827 43.5205 25.2386 46.1123C22.4945 48.7041 19.1366 50 15.1648 50C10.6154 50 6.9325 48.4521 4.11617 45.3564C1.37206 42.1886 0 37.977 0 32.7214C0 23.7941 2.59969 16.3427 7.79906 10.3672C13.0706 4.31965 20.1837 0.863931 29.1381 0ZM68.7834 0V3.13175C63.1507 4.28366 58.3485 6.87545 54.3768 10.9071C50.4772 14.9388 48.4914 20.0864 48.4192 26.3499C50.8744 24.406 53.6185 23.4341 56.6515 23.4341C60.4066 23.4341 63.4035 24.622 65.6421 26.9978C67.8807 29.3017 69 32.4694 69 36.5011C69 40.3168 67.6279 43.5205 64.8838 46.1123C62.1397 48.7041 58.7818 50 54.81 50C50.2606 50 46.6138 48.4521 43.8697 45.3564C41.1256 42.1886 39.7535 37.977 39.7535 32.7214C39.7535 23.7941 42.3532 16.3427 47.5526 10.3672C52.752 4.31965 59.8289 0.863931 68.7834 0Z" fill="black"/></svg>');
+        @media (max-width: 992px) {
+            left: -15px;
+            top:-50px
+        }
+    }
+    @media (max-width: 992px) {
+        margin-left: 0px;
+        margin-top: 40px;
     }
 `
 const Span = styled.span`
